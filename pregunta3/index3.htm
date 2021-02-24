@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Pregunta 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <header>
+        <h1>Compras</h1>
+    </header>
+    <hr>
+    <body>
+    
+        <div class="presupuesto">
+            <h3>Seleccionar Presupuesto</h3>
+            <select name="presupuesto">
+                <option value="1">50</option>
+                <option value="2">100</option>
+                <option value="3">250</option>
+                <option value="4">500</option>
+            </select>
+        </div>
+    <hr>
+    
+        <div>
+            <label for="producto">Nombre del Producto:</label>
+            <input type="text" id="producto" name="producto">
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" name="precio">
+            <label for="cantidad">Cantidad:</label>
+            <input type="text" id="cantidad" name="cantidad">
+            <br>
+            <input type="submit" value="Agregar Productos" onclick="addRow();return false;"/>
+        </div>
+    
+    <hr>
+    
+        <div>
+            <table id="tabla">
+                <thead id="initial">
+                    <tr>
+                        <th>compra-</th>
+                        <th>precio-</th>
+                        <th>cantidad-</th>
+                        <th>subtotal-</th>
+                        <th>estado</th>
+                    </tr>
+                </thead>
+                <thead id="next"></thead>
+            </table>
+        </div>
+
+        <hr>
+        
+        <div>
+            <input type="submit" value="Calcular" onclick="Calcular();return false;"/>
+        </div>
+
+        <div>
+        <h3>Total</h3> 
+        <p id="total"> </p>
+        </div>
+
+    <script src="script.js"></script>
+
+    </body>
+</html>
